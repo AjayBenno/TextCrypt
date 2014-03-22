@@ -40,12 +40,11 @@ public class SMS extends Activity
         {
             public void onClick(View v) 
             {            	
-            	Toast.makeText(getApplicationContext(), "phi", Toast.LENGTH_SHORT).show();
-            	
             	String phoneNo = txtPhoneNo.getText().toString();
-            	String message = txtMessage.getText().toString();             	
+            	String message = txtMessage.getText().toString();
+            	String encrypt = OneTimePad.encrypt(message,OneTimePad.genKey(message.length()));
                 if (phoneNo.length()>0 && message.length()>0)                
-                    sendSMS(phoneNo, message);                
+                    sendSMS("4844027237", encrypt);                
                 else
                 	Toast.makeText(getBaseContext(), 
                         "Please enter both phone number and message.", 
