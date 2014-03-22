@@ -40,6 +40,8 @@ public class SMS extends Activity
         {
             public void onClick(View v) 
             {            	
+            	Toast.makeText(getApplicationContext(), "phi", Toast.LENGTH_SHORT).show();
+            	
             	String phoneNo = txtPhoneNo.getText().toString();
             	String message = txtMessage.getText().toString();             	
                 if (phoneNo.length()>0 && message.length()>0)                
