@@ -44,7 +44,7 @@ public class SMS extends Activity
             	String message = txtMessage.getText().toString();
             	String encrypt = OneTimePad.encrypt(message,OneTimePad.genKey(message.length()));
                 if (phoneNo.length()>0 && message.length()>0)                
-                    sendSMS("4844027237", encrypt);                
+                    sendSMS(phoneNo, encrypt);                
                 else
                 	Toast.makeText(getBaseContext(), 
                         "Please enter both phone number and message.", 
