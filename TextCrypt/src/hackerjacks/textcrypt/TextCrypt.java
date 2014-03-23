@@ -38,6 +38,10 @@ public class TextCrypt extends Activity {
     	startActivity(intent);
     	
     }
+	public void settings(View v){
+		Intent i = new Intent(this, Prefs.class);
+		startActivity(i);
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

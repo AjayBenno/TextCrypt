@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item>Option 1</item>
+        <item>Option 12</item>
+        <item>Option 5</item>
+        
+    </string-array>
+    <string-array name="Lvalues">
+       <item >1</item> 
+       <item >12</item> 
+       <item >5</item> 
+        
+        
+        
+       
+    </string-array>   
+</resources>
