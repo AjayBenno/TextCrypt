@@ -38,4 +38,11 @@
         android:layout_height="wrap_content"
         android:text="Send SMS" />
 
+    <Button
+        android:id="@+id/contact_access"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="temp1" />
+
 </LinearLayout>
