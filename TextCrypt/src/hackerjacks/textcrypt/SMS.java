@@ -46,7 +46,9 @@ public class SMS extends Activity
             {        	
             	String phoneNo = txtPhoneNo.getText().toString();
             	String message = txtMessage.getText().toString();
-            	String encrypt = OneTimePad.encrypt(message,OneTimePad.genKey(message.length()));
+            	String encryption = OneTimePad.genKey(message.length());
+            	String encrypt = OneTimePad.encrypt(message,encryption);
+            	encrypt+= encryption;
                 if (phoneNo.length()>0 && message.length()>0)                
                     sendSMS(phoneNo, encrypt);                
                 else
