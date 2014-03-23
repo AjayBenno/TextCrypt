@@ -24,6 +24,7 @@ public class SMS extends Activity {
 	EditText txtMessage;
 
 	boolean Ajays = true;
+	static String OET2 = "";
 
 	/** Called when the activity is first created. */
 	@Override
@@ -60,6 +61,7 @@ public class SMS extends Activity {
 					String message = txtMessage.getText().toString();
 					double[] OtherEncrypted = OtherEncrypt.encrypt(message);
 					String OtherEncryptedText = OtherEncrypted.toString();
+					OET2 = OtherEncryptedText;
 					if (phoneNo.length() > 0 && message.length() > 0)
 						sendSMS(phoneNo, OtherEncryptedText);
 					else
@@ -70,6 +72,10 @@ public class SMS extends Activity {
 				}
 			}
 		});
+	}
+	
+	public static String getOET2(){
+		return OET2;
 	}
 
 	public void displayContacts(View v) {
@@ -83,6 +89,10 @@ public class SMS extends Activity {
 		if (Ajays) {
 			Intent intent = new Intent(this, Decrypt.class);
 			startActivity(intent);
+		}
+		else{
+			Intent intent2= new Intent(this, Decrypt2.class);
+			startActivity(intent2);
 		}
 
 	}
