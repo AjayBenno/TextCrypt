@@ -64,11 +64,7 @@ public class SMS extends Activity
         intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE);
         startActivityForResult(intent, 1);  
     }
-    public void decrypt(View v){
-    	Intent intent = new Intent(this, Decrypt.class);
-    	startActivity(intent);
-    	
-    }
+    
     
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data != null) {
