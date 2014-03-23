@@ -9,7 +9,7 @@ import android.widget.Toast;
 public class SmsReceiver extends BroadcastReceiver
 
 {
-	@SuppressWarnings("deprecation")
+	//@SuppressWarnings("deprecation")
 	@Override
 	
 	static String mesg = "";
