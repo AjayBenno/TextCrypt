@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 //VARUN'S EDIT ----- TEST ------ TEST ---- TEST ----- TEST
+//test 3
 public class SMS extends Activity 
 {
 	Button btnSendSMS;
