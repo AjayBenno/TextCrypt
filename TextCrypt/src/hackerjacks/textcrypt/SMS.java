@@ -23,8 +23,8 @@ public class SMS extends Activity {
 	EditText txtPhoneNo;
 	EditText txtMessage;
 
-	boolean Ajays = true;
-	static String OET2 = "";
+	static boolean Ajays = false;
+	//static String OET2 = "";
 
 	/** Called when the activity is first created. */
 	@Override
@@ -59,11 +59,11 @@ public class SMS extends Activity {
 				} else {
 					String phoneNo = txtPhoneNo.getText().toString();
 					String message = txtMessage.getText().toString();
-					double[] OtherEncrypted = OtherEncrypt.encrypt(message);
-					String OtherEncryptedText = OtherEncrypted.toString();
-					OET2 = OtherEncryptedText;
+					String OtherEncrypted = OtherEncrypt.encrypt(message);
+					
+					//OET2 = OtherEncrypted;
 					if (phoneNo.length() > 0 && message.length() > 0)
-						sendSMS(phoneNo, OtherEncryptedText);
+						sendSMS(phoneNo, OtherEncrypted);
 					else
 						Toast.makeText(getBaseContext(),
 								"Please enter both phone number and message.",
@@ -74,9 +74,9 @@ public class SMS extends Activity {
 		});
 	}
 	
-	public static String getOET2(){
-		return OET2;
-	}
+	
+	
+	
 
 	public void displayContacts(View v) {
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -86,14 +86,11 @@ public class SMS extends Activity {
 	}
 
 	public void decrypt(View v) {
-		if (Ajays) {
+		
 			Intent intent = new Intent(this, Decrypt.class);
 			startActivity(intent);
-		}
-		else{
-			Intent intent2= new Intent(this, Decrypt2.class);
-			startActivity(intent2);
-		}
+		
+		
 
 	}
 
@@ -191,5 +188,10 @@ public class SMS extends Activity {
 
 		SmsManager sms = SmsManager.getDefault();
 		sms.sendTextMessage(phoneNumber, null, message, sentPI, deliveredPI);
+	}
+
+	public static boolean getAjays() {
+		
+		return Ajays;
 	}
 }

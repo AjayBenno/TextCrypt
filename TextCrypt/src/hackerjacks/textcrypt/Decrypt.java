@@ -1,5 +1,3 @@
-
-
 package hackerjacks.textcrypt;
 
 import android.os.Bundle;
@@ -13,22 +11,28 @@ public class Decrypt extends Activity {
 
 	EditText enterDecrypt;
 	TextView showDecryption;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_decrypt);
 		enterDecrypt = (EditText) findViewById(R.id.enterDecrypt);
-		showDecryption =(TextView) findViewById(R.id.showDecryption);		
+		showDecryption = (TextView) findViewById(R.id.showDecryption);
 	}
-	public void decryptn(View v){
-		String decryption = enterDecrypt.getText().toString();
-		int length = decryption.length() /2;
-		String key = decryption.substring(length);
-		String message = decryption.substring(0,length);
-		showDecryption.setText(OneTimePad.decrypt(message, key));
+
+	public void decryptn(View v) {
+		if (SMS.getAjays()) {
+			String decryption = enterDecrypt.getText().toString();
+			int length = decryption.length() / 2;
+			String key = decryption.substring(length);
+			String message = decryption.substring(0, length);
+			showDecryption.setText(OneTimePad.decrypt(message, key));
+		}
+		else{
+			String decryption = enterDecrypt.getText().toString();
+			showDecryption.setText(OtherEncrypt.decrypt(decryption));
+		}
 	}
-	
-	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
