@@ -1,5 +1,7 @@
 package hackerjacks.textcrypt;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -142,13 +144,7 @@ public class SMS extends Activity {
 
 		String SENT = "SMS_SENT";
 		String DELIVERED = "SMS_DELIVERED";
-
-		PendingIntent sentPI = PendingIntent.getBroadcast(this, 0, new Intent(
-				SENT), 0);
-
-		PendingIntent deliveredPI = PendingIntent.getBroadcast(this, 0,
-				new Intent(DELIVERED), 0);
-
+		 
 		// ---when the SMS has been sent---
 		registerReceiver(new BroadcastReceiver() {
 			@Override
@@ -194,9 +190,19 @@ public class SMS extends Activity {
 				}
 			}
 		}, new IntentFilter(DELIVERED));
+		
+		SmsManager sms = SmsManager.getDefault();	
+		ArrayList<String> parts =sms.divideMessage(message);
+		int numParts = parts.size();
 
-		SmsManager sms = SmsManager.getDefault();
-		sms.sendTextMessage(phoneNumber, null, message, sentPI, deliveredPI);
+		ArrayList<PendingIntent> sentIntents = new ArrayList<PendingIntent>();
+		ArrayList<PendingIntent> deliveryIntents = new ArrayList<PendingIntent>();
+
+		for (int i = 0; i < numParts; i++) {
+		sentIntents.add(PendingIntent.getBroadcast(getBaseContext(), 0, getIntent(), 0));
+		deliveryIntents.add(PendingIntent.getBroadcast(getBaseContext(), 0, getIntent(), 0));
+		}
+		sms.sendMultipartTextMessage(phoneNumber, null, parts, sentIntents, deliveryIntents);
 	}
 
 	public static boolean getAjays() {

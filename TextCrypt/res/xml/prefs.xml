@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
     <SwitchPreference
-        android:title="switchs"
+        android:title="Encryption Algorthim"
         android:key="switchs"
-        android:summary="Check Yes For Encryption 2"
+        android:summary="Check Yes for sinusoidal encryption "
         android:defaultValue="true"
         ></SwitchPreference>
 
