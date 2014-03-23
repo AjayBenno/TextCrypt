@@ -3,13 +3,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:background="@drawable/back" >
     <EditText
         android:gravity="center"
         android:id="@+id/txtPhoneNo"
         android:layout_width="254dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:hint="Enter your Phone #"
+        android:hint="Enter the Phone #"
          />
 
     <Button
@@ -17,31 +19,22 @@
         android:layout_width="186dp"
         android:layout_height="wrap_content"
         android:text="Choose Contacts"
-        android:onClick="displayContacts" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Message" />
+        android:layout_marginTop="20dp"
+        android:onClick="displayContacts"/>
 
     <EditText
         android:id="@+id/txtMessage"
-        android:layout_width="fill_parent"
-        android:layout_height="150px"
-        android:gravity="top" />
+        android:layout_width="290dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your message!"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/btnSendSMS"
-        android:layout_width="fill_parent"
+        android:layout_width="186dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:text="Send SMS" />
-
-    <Button
-        android:id="@+id/decryption_stuff"
-        android:layout_width="186dp"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:text="decrypt"
-        android:onClick="decrypt" />
 
 </LinearLayout>
