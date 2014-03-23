@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
@@ -10,36 +8,3 @@
         android:title="@string/action_settings"/>
 
 </menu>
-=======
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
-</menu>
->>>>>>> 4e4b49284ec7347849c85b5f676e3a5ff80ff7e4
-=======
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
-</menu>
->>>>>>> 4e4b49284ec7347849c85b5f676e3a5ff80ff7e4
-=======
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
-</menu>
->>>>>>> 4e4b49284ec7347849c85b5f676e3a5ff80ff7e4

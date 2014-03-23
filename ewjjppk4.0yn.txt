@@ -1,0 +1,34 @@
+﻿Merge branch 'master' of https://github.com/monkifiery/TextCrypt
+
+Conflicts:
+	TextCrypt/res/layout/activity_decrypt.xml
+	TextCrypt/src/hackerjacks/textcrypt/Decrypt.java
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   TextCrypt/res/layout/activity_choose_contacts.xml
+#	modified:   TextCrypt/res/layout/activity_decrypt.xml
+#	new file:   TextCrypt/res/layout/main.xml
+#	modified:   TextCrypt/res/menu/choose_contacts.xml
+#	modified:   TextCrypt/res/menu/decrypt.xml
+#	modified:   TextCrypt/src/hackerjacks/textcrypt/ChooseContacts.java
+#	modified:   TextCrypt/src/hackerjacks/textcrypt/Decrypt.java
+#	new file:   etludero.fny.txt
+#
+
