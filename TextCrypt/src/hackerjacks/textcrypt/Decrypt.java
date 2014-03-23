@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a9ca8608a6d4782448a574d7bb248c3cbfa6bd6a
 package hackerjacks.textcrypt;
 
 import android.os.Bundle;
