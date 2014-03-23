@@ -43,6 +43,6 @@
         android:layout_width="186dp"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:text="temp1" />
+        android:text="decrypt" />
 
 </LinearLayout>

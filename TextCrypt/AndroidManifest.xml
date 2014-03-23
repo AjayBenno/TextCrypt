@@ -26,6 +26,10 @@
             android:name="hackerjacks.textcrypt.ChooseContacts"
             android:label="@string/title_activity_choose_contacts" >
         </activity>
+        <activity
+            android:name="hackerjacks.textcrypt.Decrypt"
+            android:label="@string/title_activity_decrypt" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.SEND_SMS" >
