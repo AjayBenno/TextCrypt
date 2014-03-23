@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:src="@drawable/text" />
+        android:src="@drawable/text"
+        android:onClick="webSite" />
 
     <ImageView
         android:id="@+id/imageView2"

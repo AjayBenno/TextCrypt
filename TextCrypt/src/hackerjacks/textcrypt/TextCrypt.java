@@ -1,5 +1,6 @@
 package hackerjacks.textcrypt;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.app.Activity;
@@ -24,7 +25,10 @@ public class TextCrypt extends Activity {
         Intent intent = new Intent(this, SMS.class);
         startActivity(intent);
 	}
-	
+	public void webSite(View v){
+		Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.textcrypt.net"));
+		startActivity(browserIntent);
+	}
 	public void about(View v){
         Intent intent = new Intent(this, About.class);
         startActivity(intent);

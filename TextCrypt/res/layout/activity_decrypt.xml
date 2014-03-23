@@ -21,15 +21,6 @@
         <requestFocus />
     </EditText>
 
-    <TextView
-        android:id="@+id/showDecryption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="" />
-
     <Button
         android:id="@+id/decryptNow"
         android:layout_width="wrap_content"
@@ -38,5 +29,12 @@
         android:layout_centerHorizontal="true"
         android:onClick="decryptn"
         android:text="Decrypt!" />
+    <TextView android:id="@+id/showDecryption" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/decryptNow" 
+        android:layout_centerHorizontal="true" 
+        android:layout_marginTop="47dp" 
+        android:textSize="48dp"/>
 
 </RelativeLayout>
