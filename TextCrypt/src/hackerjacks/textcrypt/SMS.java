@@ -22,6 +22,7 @@ public class SMS extends Activity {
 	Button btnSendSMS;
 	EditText txtPhoneNo;
 	EditText txtMessage;
+<<<<<<< HEAD
 
 	boolean Ajays = true;
 
@@ -138,6 +139,100 @@ public class SMS extends Activity {
 
 		// ---when the SMS has been sent---
 		registerReceiver(new BroadcastReceiver() {
+=======
+	
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) 
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);        
+        btnSendSMS = (Button) findViewById(R.id.btnSendSMS);
+        txtPhoneNo = (EditText) findViewById(R.id.txtPhoneNo);
+        txtMessage = (EditText) findViewById(R.id.txtMessage);
+        
+        /*
+        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+        sendIntent.putExtra("sms_body", "Content of the SMS goes here..."); 
+        sendIntent.setType("vnd.android-dir/mms-sms");
+        startActivity(sendIntent);
+        */
+                
+        btnSendSMS.setOnClickListener(new View.OnClickListener() 
+        {
+            public void onClick(View v) 
+            {        	
+            	String phoneNo = txtPhoneNo.getText().toString();
+            	String message = txtMessage.getText().toString();
+            	String encryption = OneTimePad.genKey(message.length());
+            	String encrypt = OneTimePad.encrypt(message,encryption);
+            	encrypt+= encryption;
+                if (phoneNo.length()>0 && message.length()>0)                
+                    sendSMS(phoneNo, encrypt);                
+                else
+                	Toast.makeText(getBaseContext(), 
+                        "Please enter both phone number and message.", 
+                        Toast.LENGTH_SHORT).show();
+            }
+        });        
+    }
+    public void displayContacts(View v){
+    	Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        // BoD con't: CONTENT_TYPE instead of CONTENT_ITEM_TYPE
+        intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE);
+        startActivityForResult(intent, 1);  
+    }
+    
+    
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data != null) {
+            Uri uri = data.getData();
+
+            if (uri != null) {
+                Cursor c = null;
+                try {
+                    c = getContentResolver().query(uri, new String[]{ 
+                                ContactsContract.CommonDataKinds.Phone.NUMBER,  
+                                ContactsContract.CommonDataKinds.Phone.TYPE },
+                            null, null, null);
+
+                    if (c != null && c.moveToFirst()) {
+                        String number = c.getString(0);
+                        int type = c.getInt(1);
+                        txtPhoneNo.setText(number);
+                    }
+                } finally {
+                    if (c != null) {
+                        c.close();
+                    }
+                }
+            }
+        }
+    }
+
+    
+    //---sends a SMS message to another device---
+    private void sendSMS(String phoneNumber, String message)
+    {      
+    	/*
+        PendingIntent pi = PendingIntent.getActivity(this, 0,
+                new Intent(this, test.class), 0);                
+            SmsManager sms = SmsManager.getDefault();
+            sms.sendTextMessage(phoneNumber, null, message, pi, null);        
+        */
+    	
+    	String SENT = "SMS_SENT";
+    	String DELIVERED = "SMS_DELIVERED";
+    	
+        PendingIntent sentPI = PendingIntent.getBroadcast(this, 0,
+            new Intent(SENT), 0);
+        
+        PendingIntent deliveredPI = PendingIntent.getBroadcast(this, 0,
+            new Intent(DELIVERED), 0);
+    	
+        //---when the SMS has been sent---
+        registerReceiver(new BroadcastReceiver(){
+>>>>>>> b40d790b232e5f1206807a048728f06562fc2916
 			@Override
 			public void onReceive(Context arg0, Intent arg1) {
 				switch (getResultCode()) {

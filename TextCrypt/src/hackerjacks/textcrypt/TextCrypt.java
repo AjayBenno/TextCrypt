@@ -30,6 +30,11 @@ public class TextCrypt extends Activity {
         Intent intent = new Intent(this, About.class);
         startActivity(intent);
 	}
+	public void decrypt(View v){
+    	Intent intent = new Intent(this, Decrypt.class);
+    	startActivity(intent);
+    	
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
