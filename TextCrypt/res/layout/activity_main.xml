@@ -14,11 +14,12 @@
         android:hint="Enter the Phone #"
          />
 
-    <Button
+    <ImageView
         android:id="@+id/contact_access"
-        android:layout_width="186dp"
-        android:layout_height="wrap_content"
-        android:text="Choose Contacts"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/choosecontacts"
         android:layout_marginTop="20dp"
         android:onClick="displayContacts"/>
 
@@ -30,11 +31,12 @@
         android:hint="Enter your message!"
         android:gravity="center"/>
 
-    <Button
+    <ImageView
         android:id="@+id/btnSendSMS"
-        android:layout_width="186dp"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:padding="20dp"
+        android:src="@drawable/sms"
         android:text="Send SMS" />
 
 </LinearLayout>
