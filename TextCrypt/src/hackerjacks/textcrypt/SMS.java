@@ -84,9 +84,6 @@ public class SMS extends Activity {
 			Intent intent = new Intent(this, Decrypt.class);
 			startActivity(intent);
 		}
-		else{
-			Intent 
-		}
 
 	}
 
