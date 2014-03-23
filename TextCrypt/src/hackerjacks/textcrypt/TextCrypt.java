@@ -9,7 +9,7 @@ import android.database.Cursor;
 import android.view.Menu;
 import android.view.View;
 
-public class Main extends Activity {
+public class TextCrypt extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

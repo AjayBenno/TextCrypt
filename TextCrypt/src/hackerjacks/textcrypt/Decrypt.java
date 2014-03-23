@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 package hackerjacks.textcrypt;
 
 import android.os.Bundle;

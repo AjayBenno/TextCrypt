@@ -7,7 +7,7 @@
     <string name="contact_access">Choose Contacts</string>
     <string name="title_activity_choose_contacts">ChooseContacts</string>
     <string name="title_activity_decrypt">Decrypt</string>
-    <string name="main">Main</string>
+    <string name="main">TextCrypt</string>
     <string name="title_activity_about">About</string>
 
 </resources>
