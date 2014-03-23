@@ -6,9 +6,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.telephony.gsm.SmsManager;
 import android.view.View;
@@ -23,13 +25,20 @@ public class SMS extends Activity {
 	EditText txtPhoneNo;
 	EditText txtMessage;
 
-	static boolean Ajays = false;
+	static boolean Ajays;
 	//static String OET2 = "";
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		SharedPreferences myPreference=PreferenceManager.getDefaultSharedPreferences(this);
+		 if(myPreference.getBoolean("switchs", false)) {
+			 Ajays=false;
+		 }
+		 else{
+			 Ajays=true;
+		 }
 		setContentView(R.layout.activity_main);
 		btnSendSMS = (Button) findViewById(R.id.btnSendSMS);
 		txtPhoneNo = (EditText) findViewById(R.id.txtPhoneNo);
