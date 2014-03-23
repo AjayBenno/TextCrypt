@@ -39,7 +39,7 @@ public class SMS extends Activity
         btnSendSMS.setOnClickListener(new View.OnClickListener() 
         {
             public void onClick(View v) 
-            {     //hi       	
+            {        	
             	String phoneNo = txtPhoneNo.getText().toString();
             	String message = txtMessage.getText().toString();
             	String encrypt = OneTimePad.encrypt(message,OneTimePad.genKey(message.length()));
@@ -51,6 +51,10 @@ public class SMS extends Activity
                         Toast.LENGTH_SHORT).show();
             }
         });        
+    }
+    public void displayContacts(View v){
+    Intent intent= new Intent(this, ChooseContacts.class);
+    startActivity(intent);
     }
     
     //---sends a SMS message to another device---
