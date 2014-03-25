@@ -3,11 +3,15 @@
 
     <string name="app_name">TextCrypt</string>
     <string name="action_settings">Settings</string>
-     <string name="action_sfun">fun</string>
+    <string name="action_sfun">fun</string>
     <string name="hello_world">Hello world!</string>
     <string name="contact_access">Choose Contacts</string>
     <string name="title_activity_choose_contacts">ChooseContacts</string>
     <string name="title_activity_decrypt">Decrypt</string>
+    <string name="prefer">Preferences</string>
     <string name="main">TextCrypt</string>
+    <string name="splash">TextCrypt</string>
     <string name="title_activity_about">About</string>
+    <string name="title_activity_splash">TextCrypt</string>
+
 </resources>

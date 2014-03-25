@@ -37,6 +37,7 @@
         android:layout_height="100dp"
         android:padding="20dp"
         android:src="@drawable/sms"
+        android:onClick="sendNow"
         android:text="Send SMS" />
 
 </LinearLayout>

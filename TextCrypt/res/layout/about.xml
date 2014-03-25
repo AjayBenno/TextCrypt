@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+
+    <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/back"
     android:orientation="vertical" >
-
+    
+    
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="200dp"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:padding="10dp"
         android:src="@drawable/aboutbold" />
@@ -26,5 +32,73 @@
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:src="@drawable/textc" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/website"
+        android:onClick="goToWebsite" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/textweb"
+        android:onClick="goToWebsite"
+        android:hapticFeedbackEnabled="true" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:paddingTop="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/madeby" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ajay" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/arun" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/arunp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/jeff" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/varun" />
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/vinay" />
+    
 </LinearLayout>
+</ScrollView>
